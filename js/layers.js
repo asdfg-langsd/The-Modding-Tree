@@ -36,7 +36,7 @@ addLayer("u", {
 	    description: "+8 more base point gain",
 	    cost: new Decimal(11),
 	    unlocked(){
-                return false
+                return hasUpgrade("u", 11)
 	    }
     }
 })
