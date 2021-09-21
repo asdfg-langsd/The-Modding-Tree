@@ -42,7 +42,7 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(1)
-	gain = 1 + player[upgrade].point
+	if(hasUpgrade("u", 11)) gain = gain + 1
 	return gain
 }
 
