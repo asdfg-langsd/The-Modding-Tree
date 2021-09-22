@@ -37,11 +37,26 @@ addLayer("u", {
 	    cost: new Decimal(11),
 	    unlocked(){
                 return hasUpgrade("u", 11)
-	    },
+		}
+	},
 	21:{
 	    title:"doubles",
 	    description: "*2 base point gain",
 	    cost: new Decimal(50),
+        unlocked(){
+			return hasUpgrade("u", 12)
+		}
+	},
+	22:{
+		title:"effective",
+		description:"makes upgrade 12 x10 times more effective",
+		cost: new Decimal(111),
+		unlocked(){
+			return hasUpgrade("u", 12)
+		}
+	}
+		
+                
 	    
 	    
     }
