@@ -52,7 +52,7 @@ addLayer("u", {
 		description:"makes upgrade 12 x10 times more effective",
 		cost: new Decimal(111),
 		unlocked(){
-			return hasUpgrade("u", 12)
+			return hasUpgrade("u", 21)
 		},
 		effect() {
         return player[this.layer].points.add(1).pow(0.5)
