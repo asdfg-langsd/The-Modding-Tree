@@ -16,7 +16,6 @@ addLayer("u", {
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
 	if(hasUpgrade("u", 13)) mult = mult.times(upgradeEffect("u", 13))
-	
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -35,7 +34,7 @@ addLayer("u", {
 	},
 	12:{
 	    title:"more upgrade points, more boosts",
-	    description: "the title says everything",j
+	    description: "the title says everything",
 	    cost: new Decimal(4),
 	    unlocked(){
                 return hasUpgrade("u", 11)
@@ -46,7 +45,7 @@ addLayer("u", {
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
 
 	},
-	13:{
+	21:{
 	    title:"gain more",
 	    description: "you gain more upgrade points with the more points",
 	    cost: new Decimal(30),
