@@ -15,7 +15,7 @@ addLayer("u", {
     exponent: 0.5, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
-		if(hasUpgrade("u", 21)) mult = mult.add(upgradeEffect("u", 21))
+	if(hasUpgrade("u", 21)) mult = mult.add(upgradeEffect("u", 21))
 	
         return mult
     },
@@ -43,7 +43,7 @@ addLayer("u", {
 	    effect() {
                 return player[this.layer].points.add(1).pow(0.5)
             },
-        effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
+            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
 
 	},
 	21:{
