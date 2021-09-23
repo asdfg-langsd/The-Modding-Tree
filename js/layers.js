@@ -23,7 +23,7 @@ addLayer("u", {
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "u", description: "U: Reset for upgrade points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "u", description: "U: Reset for upgrade points", onPress(){if (canReset(this.layer)) doReset(this.layer)}}
     ],
     layerShown(){return true},
     upgrades: {
@@ -42,7 +42,7 @@ addLayer("u", {
 	    effect() {
                 return player[this.layer].points.add(1).pow(0.5)
             },
-            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
+            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }// Add formatting to the effect
 
 	},
 	21:{
@@ -55,7 +55,7 @@ addLayer("u", {
 	    effect() {
                 return player.points.add(1).dividedBy(10)
             },
-            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
+            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" } // Add formatting to the effect
 
 	}
 		
