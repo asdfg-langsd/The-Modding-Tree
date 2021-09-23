@@ -15,7 +15,7 @@ addLayer("u", {
     exponent: 0.5, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
-	if(hasUpgrade("u", 21)) mult = mult.times(upgradeEffect("u", 21))
+	if(hasUpgrade("u", 13)) mult = mult.times(upgradeEffect("u", 13))
 	
         return mult
     },
@@ -46,7 +46,7 @@ addLayer("u", {
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
 
 	},
-	21:{
+	13:{
 	    title:"gain more",
 	    description: "you gain more upgrade points with the more points",
 	    cost: new Decimal(30),
