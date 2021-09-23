@@ -33,7 +33,7 @@ addLayer("u", {
 	},
 	12:{
 	    title:"more upgrade points, more boosts",
-	    description: "the title says everything",
+	    description: "the title says everything",j
 	    cost: new Decimal(11),
 	    unlocked(){
                 return hasUpgrade("u", 11)
@@ -41,9 +41,23 @@ addLayer("u", {
 	    effect() {
                 return player[this.layer].points.add(1).pow(0.5)
             },
-            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
+        effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
+
+	},
+	21:{
+	    title:"gain more",
+	    description: "you gain more upgrade points with the more points",
+	    cost: new Decimal(30),
+	    unlocked(){
+                return hasUpgrade("u", 12)
+	    },
+	    effect() {
+                return player.points.add(1).dividedBy(10)
+            },
+        effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
 
 	}
+		
 		
                 
 	    
