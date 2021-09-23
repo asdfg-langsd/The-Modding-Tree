@@ -32,8 +32,8 @@ addLayer("u", {
 	    cost: new Decimal(2)
 	},
 	12:{
-	    title:"fill it in 10",
-	    description: "+8 more base point gain",
+	    title:"more upgrade points, more boosts",
+	    description: "the title says everything",
 	    cost: new Decimal(11),
 	    unlocked(){
                 return hasUpgrade("u", 11)
