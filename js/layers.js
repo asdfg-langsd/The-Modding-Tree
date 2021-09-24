@@ -53,7 +53,7 @@ addLayer("u", {
                 return hasUpgrade("u", 12)
 	    },
 	    effect() {
-                return player.points.add(1).pow(0.15)
+                return player.points.add(1).dividedBy(10)
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" } // Add formatting to the effect
 
