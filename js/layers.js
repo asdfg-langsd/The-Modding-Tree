@@ -54,9 +54,7 @@ addLayer("u", {
 	    },
 	    effect() {
                 return player.points.add(1).dividedBy(10)
-            },
-            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" } // Add formatting to the effect
-
+            }
 	}
     }
 })
