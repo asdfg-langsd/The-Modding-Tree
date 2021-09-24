@@ -42,7 +42,7 @@ addLayer("u", {
 	    effect() {
                 return player[this.layer].points.add(1).times(floor(player[this.layer].points.dividedBy(1.5)))
             },
-            effectDisplay() { return format(upgradeEffect(this.layer, this.id).times(2))+"x" }// Add formatting to the effect
+            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }// Add formatting to the effect
 
 	},
 	21:{
@@ -54,7 +54,8 @@ addLayer("u", {
 	    },
 	    effect() {
                 return player.points.add(1).dividedBy(10)
-            }
+            },
+	    effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
 	}
     }
 })
