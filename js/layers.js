@@ -46,8 +46,8 @@ addLayer("u", {
 
 	},
 	21:{
-	    title:"gain more",
-	    description: "you gain more upgrade points with the more points",
+	    title:"too high",
+	    description: "lower the target for the next UP with the more points",
 	    cost: new Decimal(10),
 	    unlocked(){
                 return hasUpgrade("u", 12)
