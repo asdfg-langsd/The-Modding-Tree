@@ -38,13 +38,13 @@ function canGenPoints(){
 
 // Calculate points/sec!
 function getPointGen() {
-	if(!canGenPoints())
+	if(!canGenPoints()){
 		return new Decimal(0)
-
+	}
 	let gain = new Decimal(1)
 	if(hasUpgrade("u", 11)) gain = gain.times(2)
 	if(hasUpgrade("u", 12)) gain = gain.times(upgradeEffect("u", 12))
-	
+	gain.times(player[prestige].points)
 	return gain
 }
 
