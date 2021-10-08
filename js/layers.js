@@ -4,7 +4,7 @@ addLayer("u", {
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: true,
-		points: new Decimal(0)
+	points: new Decimal(0)
     }},
     color: "#4BDC13",
     requires: new Decimal(10), // Can be a function that takes requirement increases into account
@@ -15,8 +15,8 @@ addLayer("u", {
     exponent: 0.5, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
-		if(hasUpgrade("u", 21)) mult = mult.times(upgradeEffect("u", 21))
-		if(hasUpgrade("u", 22)) mult = mult.times(2)
+	if(hasUpgrade("u", 21)) mult = mult.times(upgradeEffect("u", 21))
+	if(hasUpgrade("u", 22)) mult = mult.times(2)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -28,35 +28,35 @@ addLayer("u", {
     ],
     layerShown(){return true},
     upgrades: {
-        11: {
-       		title:"+1",
-	    	description: "+1 base point gain",
-	    	cost: new Decimal(2)
+        	11: {
+       			title:"+1",
+	    		description: "+1 base point gain",
+	    		cost: new Decimal(2)
 		},
 		12:{
-	    	title:"more upgrade points, more boosts",
-	    	description: "the title says everything",
-	    	cost: new Decimal(4),
-	    	unlocked(){
-                return hasUpgrade("u", 11)
-	    	},
+	    		title:"more upgrade points, more boosts",
+	    		description: "the title says everything",
+	    		cost: new Decimal(4),
+	    		unlocked(){
+                		return hasUpgrade("u", 11)
+	    		},
 	   		effect() {
-            	return (player[this.layer].points.add(1).pow(0.25)).add(1)
-            },
-       		effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }// Add formatting to the effect
+            			return (player[this.layer].points.add(1).pow(0.25)).add(1)
+            		},
+       			effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }// Add formatting to the effect
 
 		},
 		21:{
-	    	title:"too high",
-	    	description: "lower the target for the next UP with the more points",
-	    	cost: new Decimal(10),
-	    	unlocked(){
-           		return hasUpgrade("u", 12)
-	    	},
-	    	effect() {
-            	return player.points.add(1).dividedBy(10)
-        	},
-	    	effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
+	    		title:"too high",
+	    		description: "lower the target for the next UP with the more points",
+	    		cost: new Decimal(10),
+	    		unlocked(){
+           			return hasUpgrade("u", 12)
+	    		},
+	    		effect() {
+            			return player.points.add(1).dividedBy(10)
+        		},
+	    		effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
 		},
 		22:{
 			title:"unlock",
@@ -74,7 +74,7 @@ addLayer("p", {
     position: 1, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: true,
-		points: new Decimal(0)
+	points: new Decimal(0)
     }},
     color: "#4BDC13",
     requires: new Decimal(111), // Can be a function that takes requirement increases into account
