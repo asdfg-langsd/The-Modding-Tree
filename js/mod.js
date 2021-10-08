@@ -3,7 +3,7 @@ let modInfo = {
 	id: "pointree",
 	author: "gghu",
 	pointsName: "points",
-	discordName: "",
+	discordName: "gghu#7381",
 	discordLink: "",
 	initialStartPoints: new Decimal (10), // Used for hard resets and new players
 	
