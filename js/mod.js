@@ -7,13 +7,13 @@ let modInfo = {
 	discordLink: "",
 	initialStartPoints: new Decimal (10), // Used for hard resets and new players
 	
-	offlineLimit: 10000000000 ,  // In hours
+	offlineLimit: 10000000000  // In hours
 }
 
 // Set your version in num and name
 let VERSION = {
 	num: "0.0.1",
-	name: "Release beta",
+	name: "Release beta"
 }
 
 let changelog = `<h1>Changelog:</h1><br>
