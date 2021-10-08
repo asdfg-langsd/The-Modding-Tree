@@ -95,4 +95,4 @@ addLayer("p", {
         {key: "p", description: "P: reset Prestige Points", onPress(){if (canReset(this.layer)) doReset(this.layer)}}
     ],
     layerShown(){return hasUpgrade("u", 22)}
-}
+})
