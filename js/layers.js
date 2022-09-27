@@ -17,6 +17,8 @@ addLayer("u", {
         mult = new Decimal(1)
 	if(hasUpgrade("u", 21)) mult = mult.times(upgradeEffect("u", 21))
 	if(hasUpgrade("u", 22)) mult = mult.times(2)
+	if(hasUpgrade("p", 11)) mult = mult.times(3)
+	mult.times(player.prestige)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -98,8 +100,8 @@ addLayer("p", {
     upgrades:{
 		11:{
 			title:"*3",
-	    	description: "*3",
-	    	cost: new Decimal(3)
+	    		description: "*3",
+	    		cost: new Decimal(3)
 		}
 	}
 })
