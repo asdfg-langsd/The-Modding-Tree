@@ -18,7 +18,7 @@ addLayer("u", {
 	if(hasUpgrade("u", 21)) mult = mult.times(upgradeEffect("u", 21))
 	if(hasUpgrade("u", 22)) mult = mult.times(2)
 	if(hasUpgrade("p", 11)) mult = mult.times(3)
-	mult.times(player.prestige)
+	mult.times(player.prestige + 1)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -96,11 +96,11 @@ addLayer("p", {
     hotkeys: [
         {key: "p", description: "P: reset Prestige Points", onPress(){if (canReset(this.layer)) doReset(this.layer)}}
     ],
-    layerShown(){return hasUpgrade("u", 22)},
+    layerShown(){return hasUpgrade("u", 22) || player.prestige > 0 || hasUpgrade("p", 11)},
     upgrades:{
 		11:{
 			title:"*3",
-	    		description: "*3",
+	    		description: "*3 point gain",
 	    		cost: new Decimal(3)
 		}
 	}
